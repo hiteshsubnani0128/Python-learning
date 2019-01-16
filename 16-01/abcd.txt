@@ -1,0 +1,75 @@
+Dictionary In Python
+>>> dict
+{'name': 'Hitesh', 'age': 12, 'passowrd': '1082'}
+
+To update a dictionary we update using :-
+
+dict['Key'] = 'What you want to change'
+
+#to clear a Dictionary
+>>> dict.clear()
+>>> dict
+{}
+Keys = Immutable
+values = Mutable
+>>> a = {'one' : 1}
+>>> a
+{'one': 1}
+>>> a['one']
+1
+>>> a.get('one')
+1
+>>> a.get('onee', 'No data avaliable')
+'No data avaliable'
+
+//Set default function wont update if value exists
+
+>>> a.setdefault(5,'hi')
+'hi'
+>>> a
+{'one': 1, 5: 'hi'}
+
+>>> a
+{'one': 1, 5: 'hi', 1: 'hi'}
+>>> a.update([('one','2')])
+>>> a
+{'one': '2', 5: 'hi', 1: 'hi'}
+>>> a.update([('name','hitesh')])
+>>> a
+{'one': '2', 5: 'hi', 1: 'hi', 'name': 'hitesh'}
+
+abc.update([('name','Hitesh'),('age',10)])
+>>> abc
+{'name': 'Hitesh', 'age': 10}
+
+>>> a.update(abc.items())
+>>> a
+{'one': '2', 5: 'hi', 1: 2, 'name': 'Hitesh', 'age': 10}
+
+>>> a.update(**abc)
+>>> abc
+{'name': 'Hitesh', 'age': 10}
+>>> abc.update([(1:1)])
+  File "<stdin>", line 1
+    abc.update([(1:1)])
+                  ^
+SyntaxError: invalid syntax
+>>> abc.update([(1,1)])
+>>> abc
+{'name': 'Hitesh', 'age': 10, 1: 1}
+>>> a.update(**abc)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: keyword arguments must be strings
+>>> 
+
+
+
+// How to execute a Python code
+1. Python shell (for testing purpose)
+2. Jupyter - Notebook (for interaction of data)
+3.  
+
+learn using python-course.eu
+learn using GeeksforGeek
+
